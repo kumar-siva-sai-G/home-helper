@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #3e2a56;
+        --secondary-color: #f2f1f3;
+        --text-primary: #141316;
+        --text-secondary: #736c7f;
+      }
+      body {
+        font-family: 'Manrope', sans-serif;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-white">
+<div class="relative flex h-screen w-full flex-col justify-between overflow-x-hidden">
+<div class="p-6">
+<header class="flex items-center justify-between mb-8">
+<button class="text-[var(--text-primary)]">
+<span class="material-symbols-outlined"> close </span>
+</button>
+<h1 class="text-xl font-bold text-[var(--text-primary)]">
+            Sign in or join
+          </h1>
+<div class="w-6"></div>
+</header>
+<main class="flex flex-col gap-6">
+<div class="flex flex-col gap-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-[var(--text-secondary)]">
+                mail
+              </span>
+<input class="form-input w-full rounded-xl border-none bg-[var(--secondary-color)] h-14 pl-12 pr-4 text-base text-[var(--text-primary)] placeholder:text-[var(--text-secondary)] focus:ring-2 focus:ring-[var(--primary-color)]" placeholder="Email" type="email"/>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-[var(--text-secondary)]">
+                lock
+              </span>
+<input class="form-input w-full rounded-xl border-none bg-[var(--secondary-color)] h-14 pl-12 pr-4 text-base text-[var(--text-primary)] placeholder:text-[var(--text-secondary)] focus:ring-2 focus:ring-[var(--primary-color)]" placeholder="Password" type="password"/>
+</div>
+</div>
+<p class="text-xs text-center text-[var(--text-secondary)]">
+            By continuing, you agree to our
+            <a class="font-semibold text-[var(--primary-color)]" href="#">Terms of Service</a>
+            and
+            <a class="font-semibold text-[var(--primary-color)]" href="#">Privacy Policy</a>.
+          </p>
+<button class="flex h-14 w-full cursor-pointer items-center justify-center rounded-xl bg-[var(--primary-color)] text-base font-bold text-white shadow-lg shadow-purple-200 transition-transform duration-200 ease-in-out hover:scale-[1.02]">
+<span class="truncate">Continue</span>
+</button>
+</main>
+</div>
+<div class="w-full">
+<img alt="Illustration of home service professionals" class="w-full h-auto object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6RB5UacBvb0cSQB9Q7oEQRPQJv6BDM0UkZ6FQxqIUOEQ9cGoqZLU5QB4PTGxFG0r6l8O7fJI6nTPTYTeGCPJqvpqvNd8RTZQT_nL8bKOQrym4OxUFYxu3Bc5hut8pH9wc6YThF6s7BBEtZsdI8ekznfv-sB2noJ8Cb6muU2Z-phFLZI04iFQ-ZJqkDSewl0OqutnyaYIAI-dhAKvvQRcAvAGnugYTFGtzFjaCx-ib_dZbrPJpoo5J_lzOUxBKlS9sdNqdW6PAwuWq"/>
+</div>
+</div>
+
+</body></html>
