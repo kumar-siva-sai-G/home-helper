@@ -104,9 +104,9 @@ const MobileLanding = () => {
               <p className="text-gray-400">Your trusted home service platform</p>
             </div>
             <div className="flex space-x-6">
-              <Link to="/privacy" className="text-gray-400 hover:text-white" aria-label="Privacy Policy">Privacy Policy</Link>
-              <Link to="/terms" className="text-gray-400 hover:text-white" aria-label="Terms of Service">Terms of Service</Link>
-              <Link to="/contact" className="text-gray-400 hover:text-white" aria-label="Contact Us">Contact Us</Link>
+              <Link to="/privacy" className="text-gray-400 hover:text-white">Privacy Policy</Link>
+              <Link to="/terms" className="text-gray-400 hover:text-white">Terms of Service</Link>
+              <Link to="/contact" className="text-gray-400 hover:text-white">Contact Us</Link>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-gray-700 text-center">

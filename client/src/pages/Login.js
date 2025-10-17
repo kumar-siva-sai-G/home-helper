@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import { useNavigate, Link, useSearchParams } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 
 const Login = () => {
   const [form, setForm] = useState({ email: '', password: '' });
-  const [searchParams] = useSearchParams();
   const navigate = useNavigate();
-  const expectedRole = searchParams.get('role');
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
@@ -15,13 +13,6 @@ const Login = () => {
     try {
       const res = await axios.post('http://localhost:5000/api/auth/login', form);
       localStorage.setItem('token', res.data.token);
-
-      // Check if the logged-in user's role matches the expected role from the URL
-      if (expectedRole && res.data.user.role !== expectedRole) {
-        alert(`This login is for ${expectedRole === 'provider' ? 'Service Providers' : 'Households'} only. Please use the appropriate login option.`);
-        localStorage.removeItem('token');
-        return;
-      }
 
       if (res.data.user.role === 'provider') {
         navigate('/provider-dashboard');
