@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const MobileLanding = () => {
   return (
@@ -31,7 +31,7 @@ const MobileLanding = () => {
               Connect with trusted professionals for all your home service needs. From quick fixes to major renovations, we've got you covered.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 text-white px-8 py-3 rounded-md hover:bg-emerald-700 transition duration-200">
+              <button className="bg-emerald-600 text-white px-8 py-3 rounded-md hover:bg-emerald-700 transition duration-200" onClick={() => window.open('https://play.google.com/store', '_blank')}>
                 Download App
               </button>
               <Link
