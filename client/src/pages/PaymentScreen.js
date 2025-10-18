@@ -18,7 +18,7 @@ const PaymentScreen = () => {
     }
 
     try {
-      await axios.put(`http://localhost:5000/api/bookings/${bookingId}`,
+      await axios.put(`/api/bookings/${bookingId}`,
         { status: 'confirmed' },
         {
           headers: { Authorization: `Bearer ${token}` },

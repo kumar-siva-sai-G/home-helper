@@ -10,7 +10,7 @@ const ViewBookings = () => {
       const token = localStorage.getItem('token');
       if (token) {
         try {
-          const res = await axios.get('http://localhost:5000/api/bookings/provider', {
+          const res = await axios.get('/api/bookings/provider', {
             headers: { Authorization: `Bearer ${token}` },
           });
           setBookings(res.data);

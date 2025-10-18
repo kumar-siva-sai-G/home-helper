@@ -11,7 +11,7 @@ const ManageProfile = () => {
       const token = localStorage.getItem('token');
       if (token) {
         try {
-          const res = await axios.get('http://localhost:5000/api/providers/me', {
+          const res = await axios.get('/api/providers/me', {
             headers: { Authorization: `Bearer ${token}` },
           });
           setProvider(res.data);
@@ -31,7 +31,7 @@ const ManageProfile = () => {
     const token = localStorage.getItem('token');
     if (token) {
       try {
-        await axios.put(`http://localhost:5000/api/providers/${provider._id}`,
+        await axios.put(`/api/providers/${provider._id}`,
           form,
           {
             headers: { Authorization: `Bearer ${token}` },

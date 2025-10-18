@@ -9,7 +9,7 @@ const ProviderMarketplace = () => {
   useEffect(() => {
     const fetchProviders = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/providers/service/${serviceId}`);
+        const res = await axios.get(`/api/providers/service/${serviceId}`);
         setProviders(res.data);
       } catch (err) {
         console.error(err);
