@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "outputDirectory": "client/build",
   "builds": [
     {
       "src": "server/index.js",
@@ -21,7 +20,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/client/$1"
+      "dest": "/client/build/$1"
     }
   ],
   "env": {
