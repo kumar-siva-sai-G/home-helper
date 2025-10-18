@@ -19,11 +19,22 @@
       "dest": "/server/index.js"
     },
     {
-      "src": "/(.*)",
-      "dest": "/client/$1"
+      
+      "src": "/static/(.*)",
+      "dest": "/client/build/static/$1"
+    },
+    {
+      
+      "src": "/.*",
+      "dest": "/client/build/index.html"
     }
   ],
   "env": {
     "NODE_ENV": "production"
-  }
+  },
+  
+  
+  "rootDirectory": "client", 
+  
+  "buildCommand": "CI=false npm run build"
 }
