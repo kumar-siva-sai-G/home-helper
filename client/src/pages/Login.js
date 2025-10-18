@@ -4,14 +4,20 @@ import axios from 'axios';
 
 const Login = () => {
   const [form, setForm] = useState({ email: '', password: '' });
+  // State for displaying user-friendly error messages
+  const [errorMessage, setErrorMessage] = useState(''); 
   const navigate = useNavigate();
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setErrorMessage(''); // Clear previous error
+
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', form);
+      // FIX: Use relative path /api/auth/login for Vercel deployment routing
+      // The Vercel configuration handles routing /api calls to the Node.js backend.
+      const res = await axios.post('/api/auth/login', form);
       localStorage.setItem('token', res.data.token);
 
       if (res.data.user.role === 'provider') {
@@ -20,8 +26,9 @@ const Login = () => {
         navigate('/dashboard');
       }
     } catch (err) {
-      console.error(err);
-      alert('Login failed. Please check your credentials.');
+      console.error('Login error:', err);
+      // FIX: Display error on the screen instead of using alert()
+      setErrorMessage('Login failed. Please check your credentials or network connection.');
     }
   };
 
@@ -33,6 +40,13 @@ const Login = () => {
           <h1 className="text-2xl font-bold text-gray-900 mb-2">Sign In</h1>
           <p className="text-gray-600">Welcome back to HomeFix</p>
         </div>
+
+        {/* Display error message if present */}
+        {errorMessage && (
+          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-md mb-4 shadow-sm" role="alert">
+            <p className="text-sm font-medium">{errorMessage}</p>
+          </div>
+        )}
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
