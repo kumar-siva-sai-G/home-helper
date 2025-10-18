@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const MobileLanding = () => {
   return (
@@ -103,10 +103,10 @@ const MobileLanding = () => {
               <h4 className="text-lg font-semibold">HomeFix</h4>
               <p className="text-gray-400">Your trusted home service platform</p>
             </div>
-            <div className="flex space-x-6">
-              <Link to="/privacy" className="text-gray-400 hover:text-white">Privacy Policy</Link>
-              <Link to="/terms" className="text-gray-400 hover:text-white">Terms of Service</Link>
-              <Link to="/contact" className="text-gray-400 hover:text-white">Contact Us</Link>
+            <div class="flex space-x-6">
+              <a href="/privacy" class="text-gray-400 hover:text-white">Privacy Policy</a>
+              <a href="/terms" class="text-gray-400 hover:text-white">Terms of Service</a>
+              <a href="/contact" class="text-gray-400 hover:text-white">Contact Us</a>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-gray-700 text-center">
