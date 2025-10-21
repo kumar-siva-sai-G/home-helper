@@ -35,4 +35,11 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
-module.exports = app;
+// For Vercel serverless functions, export the app as a function
+if (process.env.VERCEL) {
+  module.exports = (req, res) => {
+    app(req, res);
+  };
+} else {
+  module.exports = app;
+}
